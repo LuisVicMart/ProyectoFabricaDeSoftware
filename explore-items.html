@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explorar - NFT</title>
+  <script type="text/javascript" nonce="79deb27c8d864769b9d5f4f479c"
+    src="//local.adguard.org?ts=1670959751226&amp;type=content-script&amp;dmn=nft-tailwind.preview.uideck.com&amp;pth=%2Fexplore-items&amp;app=opera.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-dnt&amp;st-1pcttl=4320"></script>
+  <script type="text/javascript" nonce="79deb27c8d864769b9d5f4f479c"
+    src="//local.adguard.org?ts=1670959751226&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script>
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <script src="js/wow.min.js"></script>
+  <script>
+    // ===== wow js
+    new WOW().init();
+  </script>
+  <script defer src="./js/alpine.min.js"></script>
+</head>
+
+<body class="a0" x-data="
+      {
+        scrolledFromTop: false
+      }
+    " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+  @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false">
+
+  <header x-data="
+        {
+          navbarOpen: false,
+          submenuOpen: false
+        }
+      " class="header a1 a2 a3 a4 a5 a6 a7 a8" :class="scrolledFromTop ? 'a9 aa ab ac ad' : ' a9' ">
+    <div class="ae">
+      <div class="af ag[-16px] a3 a5 ah">
+        <div class="ai aj ak">
+          <a href="index.html" class="header-logo al a4" :class="scrolledFromTop ? 'am lg:an' : 'ao lg:ap' ">
+            <img src="images/logo.svg" alt="logo" class="aq aj" />
+          </a>
+        </div>
+        <div class="a3 a4 a5 ah ak">
+          <div>
+            <button @click="navbarOpen = !navbarOpen " :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler"
+              name="navbarToggler" aria-label="navbarToggler"
+              class="ar as at/2 al au[-50%] av aw ax[6px] ay focus:az lg:aA">
+              <span :class="navbarOpen && 'aB aC aD[7px]' " class="af aE[6px] al aF[2px] aG[30px] aH"></span>
+              <span :class="navbarOpen && 'aI' " class="af aE[6px] al aF[2px] aG[30px] aH"></span>
+              <span :class="navbarOpen && 'aD[-8px] aJ[135deg]' " class="af aE[6px] al aF[2px] aG[30px] aH"></span>
+            </button>
+            <nav :class="!navbarOpen && 'aA' " id="navbarCollapse"
+              class="ar as aK a4 aL[250px] av aM aN lg:aO lg:al lg:a4 lg:aj lg:a6 aP lg:aQ lg:ak lg:aR xl:aS">
+              <ul class="aT lg:a3">
+                <li class="aU af">
+                  <a href="index.html" class="aV a3 an aW aX aY[#bababa] group-hover:aZ lg:a_ lg:a10 lg:a11 lg:a12">
+                    Inicio
+                  </a>
+                </li>
+                <li class="aU af">
+                  <a href="explore-items.html"
+                    class="aV a3 an aW aX aZ group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a12 xl:a14">
+                    Explorar
+                  </a>
+                </li>
+                <li class="aU af">
+                  <a href="https://www.reddit.com/r/NFT/" target="_blank" rel="nofollow"
+                    class="aV a3 an aW aX aY[#bababa] group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a12 xl:a14">
+                    Comunidad
+                  </a>
+                </li>
+                <li class="aU submenu-item af">
+                  <a href="javascript:void(0)" @click="submenuOpen = !submenuOpen"
+                    class="af aV a3 an aW aX aY[#bababa] after:ar after:a15 after:at/2 after:a16[-2px] after:a17 after:a18 after:au[-50%] after:aC after:a19 after:a1a after:a1b group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a1c lg:a1d lg:after:a1e xl:a14">
+                    Páginas
+                  </a>
+                  <div :class="submenuOpen ? 'al' : 'aA' "
+                    class="submenu af aK a2 aG[250px] a1f aa a1g a1h[top] a1i group-hover:a1j lg:a1k lg:ar lg:aD[110%] lg:al lg:aI lg:aN lg:group-hover:a1l lg:group-hover:aK">
+                    <a href="explore-items.html" class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ">
+                      Explorar contenido
+                    </a>
+                    <a href="item-details.html" class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ">
+                      Detalles del contenido
+                    </a>
+                    <a href="create-item.html" class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ">
+                      Crear un contenido
+                    </a>
+                    <a href="connect-wallet.html" class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ">
+                      Conectar una billetera
+                    </a>
+                    <a href="support.html" class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ">
+                      Soporte
+                    </a>
+                    <a href="signin.html" class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ">
+                      Ingresar
+                    </a>
+                    <a href="signup.html" class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ">
+                      Crear cuenta
+                    </a>
+                  </div>
+                </li>
+                <li class="aU af">
+                  <a href="support.html"
+                    class="aV a3 an aW aX aY[#bababa] group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a12 xl:a14">
+                    Soporte
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="aA a1p a1q sm:a3 lg:a1r">
+            <div class="aU af aA md:a3">
+              <button class="aP a1s aW aX a1t a7 hover:a1u lg:ak xl:a1s" name="search" aria-label="search">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.2917 3.25C12.1592 3.25 13.9503 3.99189 15.2709 5.31246C16.5914 6.63303 17.3333 8.4241 17.3333 10.2917C17.3333 12.0358 16.6942 13.6392 15.6433 14.8742L15.9358 15.1667H16.7917L22.2083 20.5833L20.5833 22.2083L15.1667 16.7917V15.9358L14.8742 15.6433C13.6392 16.6942 12.0358 17.3333 10.2917 17.3333C8.4241 17.3333 6.63303 16.5914 5.31246 15.2709C3.99189 13.9503 3.25 12.1592 3.25 10.2917C3.25 8.4241 3.99189 6.63303 5.31246 5.31246C6.63303 3.99189 8.4241 3.25 10.2917 3.25ZM10.2917 5.41667C7.58333 5.41667 5.41667 7.58333 5.41667 10.2917C5.41667 13 7.58333 15.1667 10.2917 15.1667C13 15.1667 15.1667 13 15.1667 10.2917C15.1667 7.58333 13 5.41667 10.2917 5.41667Z"
+                    fill="currentColor" />
+                </svg>
+              </button>
+              <div
+                class="a1k ar aD[110%] a1e aG[250px] a1f aa a1v aI a1w group-hover:a1l group-hover:aK group-hover:a1j">
+                <form class="a3">
+                  <input type="text" placeholder="Buscar..." class="a4 a6 an ak aZ a1x" />
+                  <button class="aZ" name="search-button" aria-label="search-button">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.2917 3.25C12.1592 3.25 13.9503 3.99189 15.2709 5.31246C16.5914 6.63303 17.3333 8.4241 17.3333 10.2917C17.3333 12.0358 16.6942 13.6392 15.6433 14.8742L15.9358 15.1667H16.7917L22.2083 20.5833L20.5833 22.2083L15.1667 16.7917V15.9358L14.8742 15.6433C13.6392 16.6942 12.0358 17.3333 10.2917 17.3333C8.4241 17.3333 6.63303 16.5914 5.31246 15.2709C3.99189 13.9503 3.25 12.1592 3.25 10.2917C3.25 8.4241 3.99189 6.63303 5.31246 5.31246C6.63303 3.99189 8.4241 3.25 10.2917 3.25ZM10.2917 5.41667C7.58333 5.41667 5.41667 7.58333 5.41667 10.2917C5.41667 13 7.58333 15.1667 10.2917 15.1667C13 15.1667 15.1667 13 15.1667 10.2917C15.1667 7.58333 13 5.41667 10.2917 5.41667Z"
+                        fill="currentColor" />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <a href="connect-wallet.html"
+            class="a3 a5 a1f a1y a1z aP aS aW aX aZ a7 a1i a1A hover:a1B hover:a1C lg:ak xl:aS">
+            <span class="a1D">
+              <svg width="19" height="25" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.125 17.75V18.7083C20.125 19.2167 19.9231 19.7042 19.5636 20.0636C19.2042 20.4231 18.7167 20.625 18.2083 20.625H4.79167C3.72792 20.625 2.875 19.7625 2.875 18.7083V5.29167C2.875 4.78333 3.07693 4.29582 3.43638 3.93638C3.79582 3.57693 4.28334 3.375 4.79167 3.375H18.2083C18.7167 3.375 19.2042 3.57693 19.5636 3.93638C19.9231 4.29582 20.125 4.78333 20.125 5.29167V6.25H11.5C10.4363 6.25 9.58333 7.1125 9.58333 8.16667V15.8333C9.58333 16.3417 9.78527 16.8292 10.1447 17.1886C10.5042 17.5481 10.9917 17.75 11.5 17.75H20.125ZM11.5 15.8333H21.0833V8.16667H11.5V15.8333ZM15.3333 13.4375C14.9521 13.4375 14.5865 13.286 14.3169 13.0165C14.0473 12.7469 13.8958 12.3812 13.8958 12C13.8958 11.6188 14.0473 11.2531 14.3169 10.9835C14.5865 10.714 14.9521 10.5625 15.3333 10.5625C15.7146 10.5625 16.0802 10.714 16.3498 10.9835C16.6194 11.2531 16.7708 11.6188 16.7708 12C16.7708 12.3812 16.6194 12.7469 16.3498 13.0165C16.0802 13.286 15.7146 13.4375 15.3333 13.4375Z"
+                  fill="white" />
+              </svg>
+            </span>
+            Conectar billetera
+            </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="a1E[150px] a1F">
+    <div class="ae">
+      <div class="av a1y a1G aM ao a1H">
+        <ul class="a3 a5">
+          <li class="a3 a5 aW a1o aZ">
+            <a href="javascript:void(0)" class="aZ hover:a1u">
+              Inicio
+            </a>
+            <span class="aw"> / </span>
+          </li>
+          <li class="a3 a5 aW a1o aZ">
+            Explorar contenido
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="a2L a1F">
+    <div class="ae">
+      <div class="a1K av a1y a1G am a2u">
+        <div class="a1R a3 a1S a5 ah">
+          <div class="a4 ak lg:a2G/12">
+            <div class="a3 a2M a2N a2O lg:a2P">
+              <button class="a10 a5 a1Z a2Q a1f a20[#353444] ax[10px] a2u aW aX aZ a1w hover:a1C">
+                Todo
+              </button>
+              <button class="a10 a5 a1Z a2Q a1f a20[#353444] ax[10px] a2u aW aX aZ a1w hover:a1C">
+                Arte Digital
+              </button>
+              <button class="a10 a5 a1Z a2Q a1f a20[#353444] ax[10px] a2u aW aX aZ a1w hover:a1C">
+                Musica
+              </button>
+              <button class="a10 a5 a1Z a2Q a1f a20[#353444] ax[10px] a2u aW aX aZ a1w hover:a1C">
+                Ilustraciones 3D
+              </button>
+            </div>
+          </div>
+          <div class="a4 ak lg:a2v/12">
+            <div class="a3 a2M lg:a1p">
+              <div class="af a10">
+                <select class="a2R a1f a20[#353444] aP a2h a2i aW aX aZ a1x">
+                  <option value="">Todas las Artes</option>
+                  <option value="">Digital</option>
+                  <option value="">Ilustración</option>
+                </select>
+                <span class="ar a2S at/2 a2m/2">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.41 0.580078L6 5.17008L10.59 0.580078L12 2.00008L6 8.00008L0 2.00008L1.41 0.580078Z"
+                      fill="white" />
+                  </svg>
+                </span>
+              </div>
+              <div class="af a10">
+                <select class="a2R a1f a20[#353444] aP a2h a2i aW aX aZ a1x">
+                  <option value="" selected>Ordenar Por</option>
+                  <option value="">Más Valorada</option>
+                  <option value="">Media valorada</option>
+                  <option value="">Menos Valorada</option>
+                </select>
+                <span class="ar a2S at/2 a2m/2">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.41 0.580078L6 5.17008L10.59 0.580078L12 2.00008L6 8.00008L0 2.00008L1.41 0.580078Z"
+                      fill="white" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="a1R a3 a1S">
+        <div class="a4 ak md:a1T/2 lg:a1T/3 2xl:a1T/4">
+          <div class="a1U a1V a1W a1G aM a2T[18px]">
+            <div class="af a1Y a2p av">
+              <img src="images/NFTs/out-5.png" alt="auctions" class="a4" />
+              <button class="ar as a2U a10 a5 a1f aH a2V a2W">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
+                    fill="#F85486" />
+                </svg>
+                <span class="a2X a2Y aX a23">
+                  4.6K
+                </span>
+              </button>
+            </div>
+            <div>
+              <h3>
+                <a href="item-details.html" class="a2D a2a a1Q aX aZ hover:a1u">
+                  Cute Fluffy Monkey
+                </a>
+              </h3>
+              <div class="a2b a3 a5 ah">
+                <div class="a4">
+                  <div class="a3 a5">
+                    <div class="a2Z a2_ a4 aL[32px] a1f">
+                      <img src="images/picks/creator-01.png" alt="creator" class="a30 a4 a31 a32" />
+                    </div>
+                    <div class="a4">
+                      <h4 class="a2Y aX aZ">
+                        @Devid_Mill...
+                        <span class="al a2Y a1o a1t">
+                          creator
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="a4">
+                  <h5 class="a33 a2Y aX aZ">
+                    5.49 ETH
+                    <span class="al a2Y a1o a1t">
+                      Current Bit
+                    </span>
+                  </h5>
+                </div>
+              </div>
+              <div class="a3 a5 ah a34 a1G a35">
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f a1C aP ak a1n aX aZ a1w hover:a36 sm:a2u">
+                  Ofertar
+                </a>
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f aP ak a1n aX aZ hover:a1u sm:a2u">
+                  <span class="a37">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  Ver Historial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a4 ak md:a1T/2 lg:a1T/3 2xl:a1T/4">
+          <div class="a1U a1V a1W a1G aM a2T[18px]">
+            <div class="af a1Y a2p av">
+              <img src="images/NFTs/out-8.webp" alt="auctions" class="a4" />
+              <button class="ar as a2U a10 a5 a1f aH a2V a2W">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
+                    fill="#F85486" />
+                </svg>
+                <span class="a2X a2Y aX a23">
+                  1.6K
+                </span>
+              </button>
+            </div>
+            <div>
+              <h3>
+                <a href="item-details.html" class="a2D a2a a1Q aX aZ hover:a1u">
+                  Portrait Of The Doctor, Dr Who
+                </a>
+              </h3>
+              <div class="a2b a3 a5 ah">
+                <div class="a4">
+                  <div class="a3 a5">
+                    <div class="a2Z a2_ a4 aL[32px] a1f">
+                      <img src="images/picks/creator-02.png" alt="creator" class="a30 a4 a31 a32" />
+                    </div>
+                    <div class="a4">
+                      <h4 class="a2Y aX aZ">
+                        @Wilium_de...
+                        <span class="al a2Y a1o a1t">
+                          creator
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="a4">
+                  <h5 class="a33 a2Y aX aZ">
+                    2.85 ETH
+                    <span class="al a2Y a1o a1t">
+                      Current Bit
+                    </span>
+                  </h5>
+                </div>
+              </div>
+              <div class="a3 a5 ah a34 a1G a35">
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f a1C aP ak a1n aX aZ a1w hover:a36 sm:a2u">
+                  Ofertar
+                </a>
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f aP ak a1n aX aZ hover:a1u sm:a2u">
+                  <span class="a37">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  Ver Historial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a4 ak md:a1T/2 lg:a1T/3 2xl:a1T/4">
+          <div class="a1U a1V a1W a1G aM a2T[18px]">
+            <div class="af a1Y a2p av">
+              <img src="images/NFTs/out-14.png" alt="auctions" class="a4" />
+              <button class="ar as a2U a10 a5 a1f aH a2V a2W">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
+                    fill="#F85486" />
+                </svg>
+                <span class="a2X a2Y aX a23">
+                  4.6K
+                </span>
+              </button>
+            </div>
+            <div>
+              <h3>
+                <a href="item-details.html" class="a2D a2a a1Q aX aZ hover:a1u">
+                  Neon Cyberpunk Synthwave
+                </a>
+              </h3>
+              <div class="a2b a3 a5 ah">
+                <div class="a4">
+                  <div class="a3 a5">
+                    <div class="a2Z a2_ a4 aL[32px] a1f">
+                      <img src="images/picks/creator-03.png" alt="creator" class="a30 a4 a31 a32" />
+                    </div>
+                    <div class="a4">
+                      <h4 class="a2Y aX aZ">
+                        @Nicolo_Tes...
+                        <span class="al a2Y a1o a1t">
+                          creator
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="a4">
+                  <h5 class="a33 a2Y aX aZ">
+                    7.82 ETH
+                    <span class="al a2Y a1o a1t">
+                      Current Bit
+                    </span>
+                  </h5>
+                </div>
+              </div>
+              <div class="a3 a5 ah a34 a1G a35">
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f a1C aP ak a1n aX aZ a1w hover:a36 sm:a2u">
+                  Ofertar
+                </a>
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f aP ak a1n aX aZ hover:a1u sm:a2u">
+                  <span class="a37">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  Ver Historial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a4 ak md:a1T/2 lg:a1T/3 2xl:a1T/4">
+          <div class="a1U a1V a1W a1G aM a2T[18px]">
+            <div class="af a1Y a2p av">
+              <img src="images/NFTs/out-2.png" alt="auctions" class="a4" />
+              <button class="ar as a2U a10 a5 a1f aH a2V a2W">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
+                    fill="#F85486" />
+                </svg>
+                <span class="a2X a2Y aX a23">
+                  4.6K
+                </span>
+              </button>
+            </div>
+            <div>
+              <h3>
+                <a href="item-details.html" class="a2D a2a a1Q aX aZ hover:a1u">
+                  Cyberpunk Tarot Card
+                </a>
+              </h3>
+              <div class="a2b a3 a5 ah">
+                <div class="a4">
+                  <div class="a3 a5">
+                    <div class="a2Z a2_ a4 aL[32px] a1f">
+                      <img src="images/picks/creator-04.png" alt="creator" class="a30 a4 a31 a32" />
+                    </div>
+                    <div class="a4">
+                      <h4 class="a2Y aX aZ">
+                        @Liza_Auro...
+                        <span class="al a2Y a1o a1t">
+                          creator
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="a4">
+                  <h5 class="a33 a2Y aX aZ">
+                    0.25 ETH
+                    <span class="al a2Y a1o a1t">
+                      Current Bit
+                    </span>
+                  </h5>
+                </div>
+              </div>
+              <div class="a3 a5 ah a34 a1G a35">
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f a1C aP ak a1n aX aZ a1w hover:a36 sm:a2u">
+                  Ofertar
+                </a>
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f aP ak a1n aX aZ hover:a1u sm:a2u">
+                  <span class="a37">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  Ver Historial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a4 ak md:a1T/2 lg:a1T/3 2xl:a1T/4">
+          <div class="a1U a1V a1W a1G aM a2T[18px]">
+            <div class="af a1Y a2p av">
+              <img src="images/NFTs/out-1.png" alt="auctions" class="a4" />
+              <button class="ar as a2U a10 a5 a1f aH a2V a2W">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
+                    fill="#F85486" />
+                </svg>
+                <span class="a2X a2Y aX a23">
+                  4.6K
+                </span>
+              </button>
+            </div>
+            <div>
+              <h3>
+                <a href="item-details.html" class="a2D a2a a1Q aX aZ hover:a1u">
+                  Ape Astronaut in Space
+                </a>
+              </h3>
+              <div class="a2b a3 a5 ah">
+                <div class="a4">
+                  <div class="a3 a5">
+                    <div class="a2Z a2_ a4 aL[32px] a1f">
+                      <img src="images/picks/creator-05.png" alt="creator" class="a30 a4 a31 a32" />
+                    </div>
+                    <div class="a4">
+                      <h4 class="a2Y aX aZ">
+                        @Lathium_Lui...
+                        <span class="al a2Y a1o a1t">
+                          creator
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="a4">
+                  <h5 class="a33 a2Y aX aZ">
+                    3.24 ETH
+                    <span class="al a2Y a1o a1t">
+                      Current Bit
+                    </span>
+                  </h5>
+                </div>
+              </div>
+              <div class="a3 a5 ah a34 a1G a35">
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f a1C aP ak a1n aX aZ a1w hover:a36 sm:a2u">
+                  Ofertar
+                </a>
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f aP ak a1n aX aZ hover:a1u sm:a2u">
+                  <span class="a37">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  Ver Historial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a4 ak md:a1T/2 lg:a1T/3 2xl:a1T/4">
+          <div class="a1U a1V a1W a1G aM a2T[18px]">
+            <div class="af a1Y a2p av">
+              <img src="images/NFTs/out-9.png" alt="auctions" class="a4" />
+              <button class="ar as a2U a10 a5 a1f aH a2V a2W">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
+                    fill="#F85486" />
+                </svg>
+                <span class="a2X a2Y aX a23">
+                  4.6K
+                </span>
+              </button>
+            </div>
+            <div>
+              <h3>
+                <a href="item-details.html" class="a2D a2a a1Q aX aZ hover:a1u">
+                  Blueprint Of A Cyberpunk Car
+                </a>
+              </h3>
+              <div class="a2b a3 a5 ah">
+                <div class="a4">
+                  <div class="a3 a5">
+                    <div class="a2Z a2_ a4 aL[32px] a1f">
+                      <img src="images/picks/creator-06.png" alt="creator" class="a30 a4 a31 a32" />
+                    </div>
+                    <div class="a4">
+                      <h4 class="a2Y aX aZ">
+                        @Marko...
+                        <span class="al a2Y a1o a1t">
+                          creator
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="a4">
+                  <h5 class="a33 a2Y aX aZ">
+                    4.55 ETH
+                    <span class="al a2Y a1o a1t">
+                      Current Bit
+                    </span>
+                  </h5>
+                </div>
+              </div>
+              <div class="a3 a5 ah a34 a1G a35">
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f a1C aP ak a1n aX aZ a1w hover:a36 sm:a2u">
+                  Ofertar
+                </a>
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f aP ak a1n aX aZ hover:a1u sm:a2u">
+                  <span class="a37">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  Ver Historial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a4 ak md:a1T/2 lg:a1T/3 2xl:a1T/4">
+          <div class="a1U a1V a1W a1G aM a2T[18px]">
+            <div class="af a1Y a2p av">
+              <img src="images/NFTs/out-4.png" alt="auctions" class="a4" />
+              <button class="ar as a2U a10 a5 a1f aH a2V a2W">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
+                    fill="#F85486" />
+                </svg>
+                <span class="a2X a2Y aX a23">
+                  4.6K
+                </span>
+              </button>
+            </div>
+            <div>
+              <h3>
+                <a href="item-details.html" class="a2D a2a a1Q aX aZ hover:a1u">
+                  Cutest Red Fox Ever
+                </a>
+              </h3>
+              <div class="a2b a3 a5 ah">
+                <div class="a4">
+                  <div class="a3 a5">
+                    <div class="a2Z a2_ a4 aL[32px] a1f">
+                      <img src="images/picks/creator-07.png" alt="creator" class="a30 a4 a31 a32" />
+                    </div>
+                    <div class="a4">
+                      <h4 class="a2Y aX aZ">
+                        @Andrio_Hev...
+                        <span class="al a2Y a1o a1t">
+                          creator
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="a4">
+                  <h5 class="a33 a2Y aX aZ">
+                    0.89 ETH
+                    <span class="al a2Y a1o a1t">
+                      Current Bit
+                    </span>
+                  </h5>
+                </div>
+              </div>
+              <div class="a3 a5 ah a34 a1G a35">
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f a1C aP ak a1n aX aZ a1w hover:a36 sm:a2u">
+                  Ofertar
+                </a>
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f aP ak a1n aX aZ hover:a1u sm:a2u">
+                  <span class="a37">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  Ver Historial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a4 ak md:a1T/2 lg:a1T/3 2xl:a1T/4">
+          <div class="a1U a1V a1W a1G aM a2T[18px]">
+            <div class="af a1Y a2p av">
+              <img src="images/NFTs/out-16.png" alt="auctions" class="a4" />
+              <button class="ar as a2U a10 a5 a1f aH a2V a2W">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
+                    fill="#F85486" />
+                </svg>
+                <span class="a2X a2Y aX a23">
+                  4.6K
+                </span>
+              </button>
+            </div>
+            <div>
+              <h3>
+                <a href="item-details.html" class="a2D a2a a1Q aX aZ hover:a1u">
+                  Surreal Fantasy
+                </a>
+              </h3>
+              <div class="a2b a3 a5 ah">
+                <div class="a4">
+                  <div class="a3 a5">
+                    <div class="a2Z a2_ a4 aL[32px] a1f">
+                      <img src="images/picks/creator-08.png" alt="creator" class="a30 a4 a31 a32" />
+                    </div>
+                    <div class="a4">
+                      <h4 class="a2Y aX aZ">
+                        @Mariya_Hie...
+                        <span class="al a2Y a1o a1t">
+                          creator
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="a4">
+                  <h5 class="a33 a2Y aX aZ">
+                    1.75 ETH
+                    <span class="al a2Y a1o a1t">
+                      Current Bit
+                    </span>
+                  </h5>
+                </div>
+              </div>
+              <div class="a3 a5 ah a34 a1G a35">
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f a1C aP ak a1n aX aZ a1w hover:a36 sm:a2u">
+                  Ofertar
+                </a>
+                <a href="javascript:void(0)" class="a3 a5 a1Z a1f aP ak a1n aX aZ hover:a1u sm:a2u">
+                  <span class="a37">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  Ver Historial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a4 ak">
+          <div class="a2L a1L">
+            <a href="javascript:void(0)" class="a10 a5 a1Z a1f a1y a1z aP a1s aW aX aZ a1w hover:a1B hover:a1C">
+              Cargar Más...
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="aM a24">
+    <div class="ae">
+      <div class="a1R a3 a1S">
+        <div class="a4 ak sm:a25/12 lg:a26/12 xl:a27/12">
+          <div class="a28">
+            <div class="aL[300px]">
+              <a href="index.html" class="a29 a2a">
+                <img src="images/logo.svg" alt="logo" class="aq" />
+              </a>
+              <p class="a2b aW a1o a1t">
+                Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod
+                tempor incididunt ut labore et dolore.
+              </p>
+              <div class="a3 a5">
+                <a href="https://www.facebook.com/NFToken/" target="_blank" name="social-link" aria-label="social-link" class="a2c aZ hover:a1u">
+                  <svg width="24" height="24" viewBox="0 0 24 24" class="a2d">
+                    <path
+                      d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.5701C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                  </svg>
+                </a>
+                <a href="https://twitter.com/nft_protocol" target="_blank" name="social-link" aria-label="social-link" class="a2c aZ hover:a1u">
+                  <svg width="24" height="24" viewBox="0 0 24 24" class="a2d">
+                    <path
+                      d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.27998 9.09 5.10998 7.38 2.99998 4.79C2.62998 5.42 2.41998 6.16 2.41998 6.94C2.41998 8.43 3.16998 9.75 4.32998 10.5C3.61998 10.5 2.95998 10.3 2.37998 10C2.37998 10 2.37998 10 2.37998 10.03C2.37998 12.11 3.85998 13.85 5.81998 14.24C5.45998 14.34 5.07998 14.39 4.68998 14.39C4.41998 14.39 4.14998 14.36 3.88998 14.31C4.42998 16 5.99998 17.26 7.88998 17.29C6.42998 18.45 4.57998 19.13 2.55998 19.13C2.21998 19.13 1.87998 19.11 1.53998 19.07C3.43998 20.29 5.69998 21 8.11998 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/nftdotcom" target="_blank" name="social-link" aria-label="social-link" class="a2c aZ hover:a1u">
+                  <svg width="24" height="24" viewBox="0 0 24 24" class="a2d">
+                    <path
+                      d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                  </svg>
+                </a>
+                <a href="https://www.youtube.com/watch?v=0KrdRZVr-q4" target="_blank" name="social-link" aria-label="social-link" class="a2c aZ hover:a1u">
+                  <svg width="24" height="24" viewBox="0 0 24 24" class="a2d">
+                    <path
+                      d="M10 15L15.19 12L10 9V15ZM21.56 7.17C21.69 7.64 21.78 8.27 21.84 9.07C21.91 9.87 21.94 10.56 21.94 11.16L22 12C22 14.19 21.84 15.8 21.56 16.83C21.31 17.73 20.73 18.31 19.83 18.56C19.36 18.69 18.5 18.78 17.18 18.84C15.88 18.91 14.69 18.94 13.59 18.94L12 19C7.81 19 5.2 18.84 4.17 18.56C3.27 18.31 2.69 17.73 2.44 16.83C2.31 16.36 2.22 15.73 2.16 14.93C2.09 14.13 2.06 13.44 2.06 12.84L2 12C2 9.81 2.16 8.2 2.44 7.17C2.69 6.27 3.27 5.69 4.17 5.44C4.64 5.31 5.5 5.22 6.82 5.16C8.12 5.09 9.31 5.06 10.41 5.06L12 5C16.19 5 18.8 5.16 19.83 5.44C20.73 5.69 21.31 6.27 21.56 7.17Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a4 ak sm:a25/12 lg:a26/12 xl:a26/12">
+          <div class="a28">
+            <h2 class="a2e a2f a1O aZ">
+              Compañia
+            </h2>
+            <ul>
+              <li>
+                <a href="javascript:void(0)" class="a1M a2a aW a1o a1t a7 hover:aZ">
+                  Acerca de nosotros
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="a1M a2a aW a1o a1t a7 hover:aZ">
+                  Servicios
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="a1M a2a aW a1o a1t a7 hover:aZ">
+                  Oportunidades de Trabajo
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="a1M a2a aW a1o a1t a7 hover:aZ">
+                  Contactanos
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="a4 ak sm:a25/12 lg:a26/12 xl:a18/12">
+          <div class="a28">
+            <h2 class="a2e a2f a1O aZ">
+              Cliente
+            </h2>
+            <ul>
+              <li>
+                <a href="javascript:void(0)" class="a1M a2a aW a1o a1t a7 hover:aZ">
+                  Soporte al Cliente
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="a1M a2a aW a1o a1t a7 hover:aZ">
+                  Últimas Noticias
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="a1M a2a aW a1o a1t a7 hover:aZ">
+                  Detalles de la compañia
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="a1M a2a aW a1o a1t a7 hover:aZ">
+                  Quienes Somos
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="a4 ak sm:a25/12 lg:a26/12 xl:a26/12">
+          <div class="a28">
+            <h2 class="a2e a2f a1O aZ">
+              Suscríbete Ahora
+            </h2>
+            <p class="a1Y aW a1o a1t">
+              Ingresa tu correo para estar al tanto de las últimas noticias.
+            </p>
+            <form class="af">
+              <input type="email" name="newslettersEmail" placeholder="Ingresa tu correo.."
+                class="a2g a4 av a1W a1G a6 a2h a2i a1n a1o aZ a1x focus:a1B" />
+              <button type="submit" name="submit" aria-label="submit"
+                class="ar a2j[6px] at/2 a3 a2k a2l a2m/2 a5 a1Z a1f a1C aZ">
+                <svg width="20" height="20" viewBox="0 0 20 20" class="a2d">
+                  <path d="M1.66669 17.5L19.1667 10L1.66669 2.5V8.33333L14.1667 10L1.66669 11.6667V17.5Z" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="a2n a1G">
+        <div class="ap a1L">
+          <p class="aW a1o a1t">
+            &copy; Copyright 2022 - NFT, Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
